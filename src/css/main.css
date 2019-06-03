@@ -1,4 +1,20 @@
 p {
-  color: red;
+  color: #cd8823;
+}
+
+.jumbotron {
+  margin-bottom: 0px;
+}
+
+.fortniteNews {
+  padding: .5em;
+}
+
+.fortniteNews .newsText {
+  margin-left: 1em;
+}
+
+.main-content {
+  background-color: #b3b3b3;
 }
 /*# sourceMappingURL=main.css.map */

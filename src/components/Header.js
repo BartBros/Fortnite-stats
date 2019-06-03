@@ -2,14 +2,16 @@ import React from 'react';
 import SearchPlayer from './SearchPlayer';
 
 const Header = () => (
-    <div class="jumbotron jumbotron-fluid text-center">
-  <div class="container">
-    <h1 class="display-4">Your Fortnite Stats</h1>
+    <header>
+        <div className="jumbotron jumbotron-fluid text-center">
+            <div className="container">
+                <h1 className="display-4">Your Fortnite Stats</h1>
 
-    <SearchPlayer />
+                <SearchPlayer />
 
-  </div>
-</div>
+            </div>
+        </div>
+    </header>
 
 );
 
