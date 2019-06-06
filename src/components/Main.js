@@ -1,23 +1,23 @@
 import React from 'react';
 import FortniteNewsBR from './FortniteNewsBR'
-import FortniteStore from './FortniteStore'
+import FortniteStoreFeatured from './FortniteStore'
 
 const MainContent = () => (
 
-    <React.Fragment>
+    <div className="main-content">
 
 
         <div className="container">
             <div className="row justify-content-between">
-                <div className="col-sm-9">
+                <div className="col-sm-8">
                     <FortniteNewsBR />
                 </div>
-                <div className="col-sm-3">
-                    <FortniteStore />
+                <div className="col-sm-4">
+                    <FortniteStoreFeatured />
                 </div>
             </div>
         </div>
-    </React.Fragment>
+    </div>
 
 );
 

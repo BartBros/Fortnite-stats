@@ -1,30 +1,31 @@
 import React from 'react';
 
-class FortniteNewsBR extends React.Component {
+class FortniteStore extends React.Component {
 
   state = {
   }
 
 
   componentDidMount() {
-    this.fetchNews();
-    if (this.state.news) {
-    }
+    this.fetchStore();
   }
 
-  fetchNews = () => {
+  fetchStore = () => {
     const settings = {
       "headers": {
         "Authorization": "34d68b148e30d7f7a4e608d9baba7b92"
       },
     };
-    const url = `https://fortnite-api.theapinetwork.com/br_motd/get
-        `;
+    const url = `https://fortnite-api.theapinetwork.com/store/get`;
     fetch(url, settings)
       .then(response => response.json())
       .then(data => this.setState({
         news: data.data
       }))
+  }
+
+  createStore = () => {
+
   }
 
   logNews = () => {
@@ -34,7 +35,6 @@ class FortniteNewsBR extends React.Component {
   render() {
     return (
       <React.Fragment>
-
         <button onClick={this.logNews}>Test</button>
         <h1>{this.state.text}</h1>
         <div className="container">
@@ -42,13 +42,9 @@ class FortniteNewsBR extends React.Component {
             {
               this.state.news ?
                 this.state.news.map((item, index) => {
-                  return <div className="col-12 fortniteNews" key={index}>
-                    <div className="card p-2">
-                      <img className="card-img-top" src={item.image} alt={item.title}></img>
-                      <div className="card-body">
-                        <h3>{item.title}</h3>
-                        <p className="card-text">{item.body}</p>
-                      </div>
+                  return <div className="col-md-6 fortniteStore" key={index}>
+                    <div className="card">
+                      <img className="card-img-top" src={item.item.images.information} alt={item.title}></img>
                     </div>
                   </div>
                 })
@@ -63,4 +59,4 @@ class FortniteNewsBR extends React.Component {
   }
 }
 
-export default FortniteNewsBR;
+export default FortniteStore;
