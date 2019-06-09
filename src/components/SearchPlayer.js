@@ -30,7 +30,10 @@ class SearchPlayer extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.setState({ showStats: true });
+    this.setState({
+      showStats: true,
+      isLoading: true
+    });
     this.fetchPlayerID();
   }
 
