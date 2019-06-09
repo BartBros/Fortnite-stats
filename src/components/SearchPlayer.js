@@ -5,6 +5,7 @@ import PlayerStats from './PlayerStats';
 class SearchPlayer extends React.Component {
   state = {
     showStats: false,
+    isLoading: true,
     nickName: '',
     uid: '',
     Stats: {
@@ -67,7 +68,6 @@ class SearchPlayer extends React.Component {
     fetch(url, settings)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         this.setState({
           Stats: {
             username: data.username,
@@ -80,6 +80,7 @@ class SearchPlayer extends React.Component {
           }
         });
       })
+      .then(this.setState({isLoading: false}))
   }
 
   render() {
@@ -95,6 +96,7 @@ class SearchPlayer extends React.Component {
               nickName={this.state.Stats.username}
               uid={this.state.uid}
               close={this.closeStats}
+              isLoading={this.state.isLoading}
               matchesplayed={this.state.Stats.matchesplayed}
               kills={this.state.Stats.kills}
               kd={this.state.Stats.kd}

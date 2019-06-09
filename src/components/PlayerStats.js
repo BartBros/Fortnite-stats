@@ -6,7 +6,11 @@ class PlayerStats extends React.Component {
     return (
       <div className="player-stats">
       <a href="#" className="close-button" onClick={this.props.close}>✖</a>
-        <div className="container">
+        {
+          this.props.isLoading ?
+          <img src="http://www.mytreedb.com/uploads/mytreedb/loader/ajax_loader_blue_350.gif" className="img-fluid" alt="Loading" />
+          :
+          <div className="container">
           <div className="row text-center">
             <div className="col-sm">
               Name: {this.props.nickName}
@@ -49,6 +53,8 @@ class PlayerStats extends React.Component {
           </div>
 
         </div>
+        }
+
       </div>
 
     );
