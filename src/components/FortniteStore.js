@@ -44,8 +44,6 @@ class FortniteStore extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <button onClick={this.logNews}>Test</button>
         <div className="container">
           <div className="row">
 
@@ -82,7 +80,6 @@ class FortniteStore extends React.Component {
 
           </div>
         </div>
-      </React.Fragment>
 
     )
   }

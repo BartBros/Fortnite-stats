@@ -1,0 +1,51 @@
+.player-stats {
+    position: relative;
+    margin: 2em 0;
+    padding: .3em 0;
+    color: white;
+    background-color: $main;
+    font-size: 2em;
+}
+
+.big {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+.row {
+    .main-stats {
+        background: radial-gradient(rgb(56, 78, 141), #142554 50%);
+        border-right: 3px solid rgba(180, 180, 180, 0.5);
+    }
+    .main-stats-last {
+        border-right: none;
+    }
+
+}
+
+
+.bg-stats {
+    background: #142554;
+    padding: .5em;
+}
+
+.stats-small {
+    margin-bottom: .3em;
+    background: #49608C;
+}
+
+.close-button {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: red;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: .5em;
+    &:hover {
+        text-decoration: none;
+        color: red;
+    }
+}

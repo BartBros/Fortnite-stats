@@ -35,7 +35,6 @@ class FortniteNewsBR extends React.Component {
     return (
       <React.Fragment>
 
-        <button onClick={this.logNews}>Test</button>
         <h1>{this.state.text}</h1>
         <div className="container">
           <div className="row justify-content-center">
