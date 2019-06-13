@@ -5,7 +5,6 @@ class FortniteNewsBR extends React.Component {
   state = {
   }
 
-
   componentDidMount() {
     this.fetchNews();
     if (this.state.news) {
@@ -18,8 +17,7 @@ class FortniteNewsBR extends React.Component {
         "Authorization": "34d68b148e30d7f7a4e608d9baba7b92"
       },
     };
-    const url = `https://fortnite-api.theapinetwork.com/br_motd/get
-        `;
+    const url = `https://fortnite-api.theapinetwork.com/br_motd/get`;
     fetch(url, settings)
       .then(response => response.json())
       .then(data => this.setState({
@@ -57,7 +55,6 @@ class FortniteNewsBR extends React.Component {
           </div>
         </div>
       </React.Fragment>
-
     )
   }
 }

@@ -23,8 +23,6 @@ class FortniteStore extends React.Component {
         news: data.data
       }))
       .then(this.createStore)
-
-
   }
 
   createStore = () => {
@@ -34,8 +32,6 @@ class FortniteStore extends React.Component {
       featured: featured,
       daily: daily
     })
-
-
   }
 
   logNews = () => {
@@ -44,43 +40,38 @@ class FortniteStore extends React.Component {
 
   render() {
     return (
-        <div className="container">
-          <div className="row">
-
-              <h3 className="col-12">Featured</h3>
-
-            {
-              this.state.featured ?
-                this.state.featured.map((item, index) => {
-                  return <div className="col-md-6 fortniteStore" key={index}>
-                    <div className="card">
-                      <img className="card-img-top" src={item.item.images.information} alt={item.title}></img>
-                    </div>
+      <div className="container">
+        <div className="row">
+          <h3 className="col-12">Featured</h3>
+          {
+            this.state.featured ?
+              this.state.featured.map((item, index) => {
+                return <div className="col-md-6 fortniteStore" key={index}>
+                  <div className="card">
+                    <img className="card-img-top" src={item.item.images.information} alt={item.title}></img>
                   </div>
-                })
-                :
-                <h3>Wait</h3>
-            }
-            <div className="col-12">
-              <h3>Daily</h3>
-            </div>
-            {
-              this.state.daily ?
-              this.state.daily.map((item, index) => {
-                  return <div className="col-md-6 fortniteStore" key={index}>
-                    <div className="card">
-                      <img className="card-img-top" src={item.item.images.information} alt={item.title}></img>
-                    </div>
-                  </div>
-                })
-                :
-                <h3>Wait</h3>
-            }
-
-
+                </div>
+              })
+              :
+              <h3>Wait</h3>
+          }
+          <div className="col-12">
+            <h3>Daily</h3>
           </div>
+          {
+            this.state.daily ?
+              this.state.daily.map((item, index) => {
+                return <div className="col-md-6 fortniteStore" key={index}>
+                  <div className="card">
+                    <img className="card-img-top" src={item.item.images.information} alt={item.title}></img>
+                  </div>
+                </div>
+              })
+              :
+              <h3>Wait</h3>
+          }
         </div>
-
+      </div>
     )
   }
 }

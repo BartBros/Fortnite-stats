@@ -16,13 +16,7 @@ class SearchPlayer extends React.Component {
       wins: 0,
       winrate: 0
     }
-
   };
-
-  componentDidMount() {
-
-  }
-
 
   handleValueChange = (event) => {
     this.setState({ nickName: event.target.value });
@@ -41,8 +35,6 @@ class SearchPlayer extends React.Component {
     this.setState({showStats: false});
   }
 
-
-
   fetchPlayerID = () => {
     const settings = {
       "headers": {
@@ -55,10 +47,8 @@ class SearchPlayer extends React.Component {
       .then(data => {
         this.setState({ uid: data.data.uid });
         this.fetchPlayerStats();
-
       })
       .catch(err => console.log(err))
-      
   }
 
   fetchPlayerStats = () => {
@@ -79,7 +69,6 @@ class SearchPlayer extends React.Component {
             kd: data.totals.kd,
             wins: data.totals.wins,
             winrate: data.totals.winrate
-
           }
         });
       })
@@ -108,13 +97,10 @@ class SearchPlayer extends React.Component {
             />
             :
             null
-
         }
-
       </React.Fragment>
     );
   }
-
 }
 
 
